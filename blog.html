@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="progress" aria-hidden="true"><span id="progress-fill"></span></div>
 <a class="skip" href="#main">Skip to content</a>
 <div class="stripe" aria-hidden="true"></div>
 <header class="masthead masthead--compact">
@@ -29,8 +30,11 @@
 <main id="main">
 <article>
   <div class="story-cover">
-    <figure class="cover">
-      <img src="blog-cover.jpg" width="2400" height="2521" alt="A collage of fashion and technology images: runway looks, robots on a catwalk, a light-up gown, lines of code on laptop screens, and women working with laptops, mood boards, and magazines.">
+    <figure class="cover cover--wide">
+      <picture>
+        <source media="(max-width: 640px)" srcset="blog-cover-1200.jpg" width="1200" height="1261">
+        <img src="blog-cover-wide.jpg" width="2400" height="1243" alt="A collage of fashion and technology images: runway looks, robots on a catwalk, a light-up gown, lines of code on laptop screens, and women working with laptops, mood boards, and magazines.">
+      </picture>
       <h1 class="cover-title">
         <span class="cover-main">Fashion Tech, Behind the Scenes</span>
         <span class="cover-rule" aria-hidden="true"></span>
@@ -50,7 +54,7 @@
   </div>
 
   <div class="container">
-    <p>“We are two best friends with a shopping addiction, so we made it our whole job!”</p>
+    <p class="lede">“We are two best friends with a shopping addiction, so we made it our whole job!”</p>
 
     <p>That’s the slogan Ella Rubin and Katie Pfleger, the co-founders of TRACE, love to repeat. Their fashion tech startup, which recently raised $3 million of venture capital in a seed round, is building a presale marketplace where clothes shoppers, sellers, renters, and buyers come to list, finalize bids from potential buyers, set rental prices, and buy or rent items before an original owner has even shopped them on the market. Using TRACE, they can assess a specific product’s future resale or rental value and consumer demand for it before they even hit checkout.</p>
 
@@ -63,6 +67,58 @@
     <p>Over the years, the parameters of the fashion tech sector have widened beyond the digital storefronts offered by retailer websites, enabled by the technological advancements of the dot-com era, to include apps and digital platforms populated with thousands of items from catalogs spanning numerous brands that consumers can use to discover, search, try on, buy, resell, rent, and style clothes. The fashion tech applications and web-based platforms of today offer a broad range of services, from AI-powered discovery and shopping, rental, virtual styling and try-on, to generative AI product photography, dynamic visualization, circular fashion, and social and agentic commerce.</p>
 
     <p>The fashion market is massive and harbors immense potential for growth and returns. Investors have taken notice: as of October, fashion tech companies globally have raised $798 million, according to Tracxn.</p>
+
+  </div>
+
+  <section class="scrolly" aria-labelledby="scrolly-title">
+    <figure class="scrolly-graphic" id="scrolly-graphic">
+      <figcaption id="scrolly-title" class="sg-title">The money behind each company, as reported in this story</figcaption>
+      <ul class="sg-rows">
+        <li class="sg-row" data-co="cloud">
+          <span class="sg-name">Cloud Closet</span>
+          <span class="sg-stage">Bootstrapped</span>
+          <span class="sg-track"><span class="sg-bar" style="--w: 0.04%"></span></span>
+          <span class="sg-value">$20K of the founder’s own money</span>
+        </li>
+        <li class="sg-row" data-co="tote">
+          <span class="sg-name">Tote</span>
+          <span class="sg-stage">Sold to a competitor</span>
+          <span class="sg-track sg-track--empty"></span>
+          <span class="sg-value">No figure reported</span>
+        </li>
+        <li class="sg-row" data-co="trace">
+          <span class="sg-name">TRACE</span>
+          <span class="sg-stage">Just launched</span>
+          <span class="sg-track"><span class="sg-bar" style="--w: 6%"></span></span>
+          <span class="sg-value">$3M seed</span>
+        </li>
+        <li class="sg-row" data-co="remark">
+          <span class="sg-name">Remark</span>
+          <span class="sg-stage">B2B, Series A</span>
+          <span class="sg-track"><span class="sg-bar" style="--w: 54%"></span></span>
+          <span class="sg-value">$27M total</span>
+        </li>
+        <li class="sg-row" data-co="daydream">
+          <span class="sg-name">Daydream</span>
+          <span class="sg-stage">Investor favorite</span>
+          <span class="sg-track"><span class="sg-bar" style="--w: 100%"></span></span>
+          <span class="sg-value">$50M seed</span>
+        </li>
+      </ul>
+    </figure>
+
+    <div class="scrolly-steps">
+      <div class="step" data-step="intro"><p>The five companies in this story sit at very different points in the founder journey. Scroll to see how much money is behind each one.</p></div>
+      <div class="step" data-step="cloud"><p>Caroline Lakshmanan put $20,000 of her own money into Cloud Closet and has been building it since 2023. The startup is bootstrapped and now looking for investors. On this scale, its bar barely registers.</p></div>
+      <div class="step" data-step="tote"><p>Gordon Li met more than 120 investors for Tote, a business-to-business styling and discovery company, with no real success. He sold Tote to a competitor and joined TRACE as a founding engineer.</p></div>
+      <div class="step" data-step="trace"><p>Ella Rubin and Katie Pfleger raised a $3 million seed round for TRACE, which launched in October with a pop-up at Shopify New York.</p></div>
+      <div class="step" data-step="remark"><p>Remark, which builds a styling agent for premium and luxury brands, raised a $16 million Series A in 2025, bringing its total funding to $27 million.</p></div>
+      <div class="step" data-step="daydream"><p>Daydream, founded by Julie Bornstein, raised $50 million in seed funding within a week of starting to fundraise.</p></div>
+      <div class="step" data-step="all"><p>Side by side, the gap is stark: Daydream’s seed round is 2,500 times the $20,000 Cloud Closet started with.</p></div>
+    </div>
+  </section>
+
+  <div class="container">
 
     <p>However, fundraising still remains a difficult undertaking for fashion tech founders. Gordon Li, former founder of the now-shuttered business-to-business fashion tech company Tote, which built agentic styling and discovery tools for fashion businesses, described fundraising as a “brutal” process that involved meeting more than 120 investors but to no real success. “There definitely were investors who were very interested in fashion, but they [were] few and far between,” noted Li, who managed to sell Tote to a competitor before moving on to his current role as a founding engineer at TRACE.</p>
 
@@ -107,6 +163,18 @@
     <!-- CONCLUSION: replace this box with your closing paragraphs (each in its own <p>). -->
     <div class="todo"><strong>Conclusion to come.</strong> This box marks where the closing section will go.</div>
 
+    <aside class="note-card" aria-labelledby="method-head">
+      <h2 id="method-head">How I reported this story</h2>
+      <p>I interviewed six founders building in fashion tech. I chose them because each is at a different point in the founder journey:</p>
+      <ul>
+        <li><strong>Caroline Lakshmanan, Cloud Closet:</strong> a bootstrapped startup now seeking funding.</li>
+        <li><strong>Gordon Li, Tote:</strong> a startup acquired by a competitor. Li is now a founding engineer at TRACE.</li>
+        <li><strong>Ella Rubin and Katie Pfleger, TRACE:</strong> a startup that has just launched.</li>
+        <li><strong>Julie Bornstein, Daydream:</strong> a startup investors have bet on heavily, founded by a well-regarded operator.</li>
+        <li><strong>Ian Patterson, Remark:</strong> a well-funded business-to-business startup enjoying moderate success.</li>
+      </ul>
+    </aside>
+
     <!--
       Template elements, ready when you add photos.
 
@@ -144,5 +212,39 @@
     </ul>
   </div>
 </footer>
+<script>
+(function () {
+  // Reading progress bar
+  var fill = document.getElementById('progress-fill');
+  var article = document.querySelector('main article');
+  function updateProgress() {
+    if (!fill || !article) return;
+    var rect = article.getBoundingClientRect();
+    var total = article.offsetHeight - window.innerHeight;
+    var done = Math.min(Math.max(-rect.top / (total > 0 ? total : 1), 0), 1);
+    fill.style.transform = 'scaleX(' + done + ')';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  // Scrollytelling: highlight the company each step describes
+  var graphic = document.getElementById('scrolly-graphic');
+  var steps = document.querySelectorAll('.step');
+  if (!graphic || !('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('js-scrolly');
+  var rows = graphic.querySelectorAll('.sg-row');
+  function setStep(name) {
+    steps.forEach(function (s) { s.classList.toggle('is-active', s.dataset.step === name); });
+    graphic.classList.toggle('is-focused', name !== 'intro' && name !== 'all');
+    graphic.classList.toggle('is-all', name === 'all');
+    rows.forEach(function (r) { r.classList.toggle('is-active', r.dataset.co === name); });
+  }
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) setStep(e.target.dataset.step); });
+  }, { rootMargin: window.innerWidth <= 760 ? '-74% 0px -26% 0px' : '-50% 0px -50% 0px' });
+  steps.forEach(function (s) { observer.observe(s); });
+})();
+</script>
 </body>
 </html>
